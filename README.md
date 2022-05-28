@@ -1,5 +1,5 @@
 # League client interface
-A league client connector in interface style (dunno if interfaces is the correct word) <br />
+A league client connector in interface style (dunno if interfaces is the correct word), you can use this to interact with the leauge client <br />
 the "scripts" in the modules folder were made by me (lcc was cloned and modified), so no documentation on that
 
 # Documentation
@@ -67,4 +67,14 @@ Interact with the client's api endpoints **is async**
 - return json obj
 ```javascript
 c_interface.virtualCall(c_interface.dest.endpointName, (optional) data, (optional) method)
+```
+
+### Adding a missing dest
+Adds a dest to the dest list (kinda crack)
+- params
+  - `name` Name of the dest
+  - `endpoint` Actual enpoint string
+- return nothing??
+```javascript
+c_interface.addDest(name, endpoint)
 ```
