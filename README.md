@@ -13,9 +13,9 @@ the "scripts" in the modules folder were made by me (lcc was cloned and modified
 ```javascript
 // create an instance of the class (LCConnector)
 const lcc = new LCConnector()
-// listen for on connect
+// listen for event connect
 lcc.on("connect", (data) => {
-// do stuff with our data/client credentials
+  // do stuff with our data/client credentials
 })
 ```
 ## Setting up interface
