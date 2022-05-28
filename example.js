@@ -16,7 +16,6 @@ lcc.on("connect", async (game_data) => {
   // --- if we hooked successfully do ...
   if (c_user.isCorrectState("hooked", true)) {
     // --- "virtually" call a league endpoint with get, post, put
-    // virtualCall(endpoint, data (empty for get), mode[post, put] (empty for get))
     const user_data = await c_user.virtualCall(c_user.dest.me)
 
     // --- log the user data we got from the client
