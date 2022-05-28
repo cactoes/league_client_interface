@@ -1,6 +1,5 @@
 # League client interface
-A league client connector in interface style (dunno if interfaces is the correct word), you can use this to interact with the leauge client <br />
-the "scripts" in the modules folder were made by me (lcc was cloned and modified), so no documentation on that
+An easy way to interact with the league client just hook and call, this "library" is basically a middle layer between you app and the league client
 
 # Documentation
 ## Dependencies
