@@ -26,4 +26,5 @@ lcc.on("connect", async (game_data) => {
   lcc.disconnect()
 })
 
+// --- connect to the client after setting everything up
 lcc.connect()
