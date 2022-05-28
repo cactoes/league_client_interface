@@ -1,0 +1,8 @@
+{
+  "name": "lcc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "types": "types.d.ts",
+  "modules": ["file-watcher"],
+  "nodeModules": []
+}
