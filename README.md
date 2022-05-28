@@ -93,7 +93,7 @@ Interact with the client's api endpoints **is async**
 c_interface.virtualCall(c_interface.dest.endpointName, (optional) data, (optional) method)
 ```
 
-### Adding a missing dest
+### Adding your own dest/endpoint
 Adds a endpoint to the dest list, returns false if dest already exists
 - params
   - `name` Name of the dest
