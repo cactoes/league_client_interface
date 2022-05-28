@@ -36,19 +36,27 @@ For interacting with the game
 ### C_Runes
 !!Experimental For interacting with your runes
 - dest
-  - `runes` All runes of the user (in ids, i think, good luck)
+  - `runes` All runes of the user (in ids, good luck)
 
 ## Interface functions
 ### Hooking
-"hooking" Onto the function aka initialise the interface **make sure to only call once per interface** <br />
+"Hook" onto the interface aka initialise the interface **make sure to only call once per interface**, returns false if already hooked <br />
 - params
   - `data` All the credentials
 - returns boolean
 ```javascript
 c_interface.hook(credentials)
 ```
+
+### Unhooking
+Unhooks the interface, returns false if you werent hooked
+- returns boolean
+```javascript
+c_interface.unhook()
+```
+
 ### State Cheking
-Check the state of a local interface viariable <br />
+Check the state of a local interface viariable, returns false if state doesn't exists
 - params
   - `state` State to check
   - `value` Value compare current state to
@@ -67,7 +75,7 @@ c_interface.setState(state, data)
 ```
 
 ### Get State
-Gets value of the requested state
+Gets value of the requested state, returns false if state doesn't exists
 - params
   - `state` State to get
 - return state data
@@ -86,11 +94,11 @@ c_interface.virtualCall(c_interface.dest.endpointName, (optional) data, (optiona
 ```
 
 ### Adding a missing dest
-Adds a dest to the dest list (kinda crack)
+Adds a endpoint to the dest list, returns false if dest already exists
 - params
   - `name` Name of the dest
   - `endpoint` Actual enpoint string
-- return nothing??
+- return boolean
 ```javascript
 c_interface.addDest(name, endpoint)
 ```

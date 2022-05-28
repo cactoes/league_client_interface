@@ -15,15 +15,25 @@ class Interface {
   }
 
   getState(state) {
-    return this.states[state]
+    if (state in this.states) {
+      return this.states[state]
+    }
+    return false
   }
 
   addDest(name, endpoint) {
-    this.dest[name] = endpoint
+    if (!(name in this.dest)) {
+      this.dest[name] = endpoint
+      return true
+    }
+    return false
   }
 
   isCorrectState(state, value) {
-    return this.states[state] == value
+    if (state in this.states) {
+      return this.states[state] == value
+    }
+    return false
   } 
 
   async virtualCall(dest, data = false, method = false) {
@@ -41,6 +51,17 @@ class Interface {
       this.b_auth = Buffer.from(`${username}:${password}`).toString('base64')
 
       this.setState("hooked", true)
+      return true
+    }
+    return false
+  }
+
+  unhook() {
+    if (this.isCorrectState("hooked", true)) {
+      this.data = {}
+      this.b_auth = ""
+
+      this.setState("hooked", false)
       return true
     }
     return false
