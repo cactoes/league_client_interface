@@ -32,7 +32,6 @@ class Interface {
 
   hook({ protocol, address, port, username, password }) {
     if (!this.isCorrectState("hooked", true)) {
-      this.setState("hooked", true)
       this.data = {
         protocol, address, 
         port: parseInt(port),
@@ -40,6 +39,8 @@ class Interface {
       }
       
       this.b_auth = Buffer.from(`${username}:${password}`).toString('base64')
+
+      this.setState("hooked", true)
       return true
     }
     return false
