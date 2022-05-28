@@ -1,5 +1,6 @@
 # League client interface
 A league client connector in interface style (dunno if interfaces is the correct word) <br />
+the "scripts" in the modules folder were made by me (lcc was cloned and modified), so no documentation on that
 
 # Documentation
 ## Dependencies
