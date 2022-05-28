@@ -40,7 +40,7 @@ For interacting with the game
 
 ## Interface functions
 ### Hooking
-"hooking" Onto the function aka initialse the interface <br />
+"hooking" Onto the function aka initialise the interface **make sure to only call once per interface** <br />
 - params
   - `data` All the credentials
 - returns boolean
