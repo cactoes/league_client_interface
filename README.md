@@ -57,6 +57,23 @@ Check the state of a local interface viariable <br />
 c_interface.isCorrectState(state, value)
 ```
 
+### Set State
+Set value of a state or create a state
+- params
+  - `state` State to change
+  - `data` What to set the state to
+```javascript
+c_interface.setState(state, data)
+```
+
+### Get State
+Gets value of the requested state
+- params
+  - `state` State to get
+- return state data
+```javascript
+c_interface.getState(state)
+```
 ### Interacting with the client
 Interact with the client's api endpoints **is async**
 - params
