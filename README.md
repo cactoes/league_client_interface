@@ -1,10 +1,11 @@
 # League client interface
-A league client connector as interfaces (dunno if interfaces is the correct word) <br />
-!! requires node-fetch@3.2.4 !!
-
+A league client connector in interface style (dunno if interfaces is the correct word) <br />
 
 # Documentation
-## Importing
+## Dependencies
+- node-fetch@3.2.4
+
+## Imports
 - `import LCConnector from "./modules/lcc/lib/index.js"`
 - `import { C_Game, C_User, C_Runes } from "./interfaces.js"`
 ## Getting client credentials 
