@@ -1,15 +1,11 @@
 // --- global imports
-import LCConnector from "./modules/lcc/lib/index.js" // the import for getting the credentials
-import { C_Game, C_User, C_Runes } from "./interfaces.js" // import for the interfaces
-
-// --- required for getting the credentials to connect to league's api
-const lcc = new LCConnector()
+import client, { C_Game, C_User, C_Runes } from "./interfaces.js" // import for the interfaces
 
 // --- interfaces for interacting with the game
 const c_user = new C_User()
 
 // --- start a soon as we have the credentials
-lcc.on("connect", async (game_data) => {
+client.on("connect", async (game_data) => {
   // --- hook the user class with the credentials we got
   c_user.hook(game_data)
   
@@ -23,8 +19,8 @@ lcc.on("connect", async (game_data) => {
   }
 
   // --- optionally disconnect from the client after we are done
-  lcc.disconnect()
+  client.disconnect()
 })
 
 // --- connect to the client after setting everything up
-lcc.connect()
+client.connect()
