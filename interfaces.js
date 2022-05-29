@@ -1,6 +1,9 @@
+import LCConnector from "./modules/lcc/lib/index.js"
 import fetch from "node-fetch"
 
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0
+
+export default new LCConnector()
 
 class Interface {
   constructor() {

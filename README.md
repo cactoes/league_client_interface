@@ -1,21 +1,22 @@
 # League client interface
-An easy way to interact with the league client. This "library" is basically a middle layer between you app and the league client
+An easy way to interact with the league client. This "library" is basically a middle layer between your app and the league client
 
 # Documentation
 ## Dependencies
 - node-fetch@3.2.4
 
-## Imports
-- `import LCConnector from "./modules/lcc/lib/index.js"`
-- `import { C_Game, C_User, C_Runes } from "./interfaces.js"`
+## Importing
+```javascript
+import client, { C_Game, C_User, C_Runes } from "./interfaces.js"
+```
 ## Getting client credentials 
 ```javascript
-// create an instance of the class (LCConnector)
-const lcc = new LCConnector()
 // listen for event connect
-lcc.on("connect", (data) => {
+client.on("connect", (data) => {
   // do stuff with our data/client credentials
 })
+// start the client connector
+client.connect()
 ```
 ## Setting up interface
 ```javascript
