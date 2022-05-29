@@ -1,5 +1,5 @@
 # League client interface
-An easy way to interact with the league client. This "library" is basically a middle layer between you app and the league client
+An easy way to interact with the league client. This "library" is basically a middle layer between your app and the league client
 
 # Documentation
 ## Dependencies
