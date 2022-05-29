@@ -10,7 +10,7 @@ class Interface {
     this.dest = new Object()
     this.b_auth = new String()
     this.data = new Object()
-    this.states = { hooked: false }
+    this.states = { hooked: false, virtualCallCount: 0 }
   }
 
   setState(state, data) {
@@ -40,6 +40,7 @@ class Interface {
   } 
 
   async virtualCall(dest, data = false, method = false) {
+    this.virtualCallCount++
     return await this[data? "upload":"get"](dest, data, method? method:"post")
   }
 

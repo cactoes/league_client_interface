@@ -88,6 +88,13 @@ Gets value of the requested state, returns false if state doesn't exists
 ```javascript
 c_interface.getState(state)
 ```
+
+### All states
+All the states currently built into the module
+- states
+  - `hooked` Boolean
+  - `virtualCallCount` Number
+
 ### Interacting with the client
 Interact with the client's api endpoints **is async**
 - params
