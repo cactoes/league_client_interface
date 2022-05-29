@@ -18,6 +18,11 @@ client.on("connect", (data) => {
 // start the client connector
 client.connect()
 ```
+### All events
+- client
+  - `connect` When "client" connects with the league client
+  - `disconnect` When "client" disconnects with the league client
+
 ## Setting up interface
 ```javascript
 const c_interface = new C_InterfaceName()
