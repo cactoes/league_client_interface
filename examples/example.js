@@ -16,6 +16,15 @@ client.on("connect", async (game_data) => {
 
     // log the user data we got from the client
     console.log(user_data)
+
+    // change our ingame status
+    user_data.statusMessage = "hello from lcinterface"
+
+    // update our status
+    const result = await interfaces.user.virtualCall(interfaces.user.dest.me, user_data, "put")
+
+    // log the result
+    console.log(result)
   }
 
   // disconnect from the client after we are done
