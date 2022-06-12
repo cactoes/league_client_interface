@@ -1,4 +1,4 @@
-declare class LCInterface {
+declare class lcinterface {
   hook(object: credentials): boolean;
   unhook(): boolean;
 
@@ -9,4 +9,4 @@ declare class LCInterface {
   virtualCall(string: dest, object?: data, string?: method): object;
 }
 
-export = LCInterface;
+export = lcinterface;
