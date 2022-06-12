@@ -14,6 +14,9 @@ const { client, C_Game, C_User, C_Runes } = require("league-client-interface")
 // listen for event connect
 client.on("connect", (data) => {
   // do stuff with our data/client credentials
+
+  // after interacting with the client
+  client.disconnect()
 })
 // start the client connector
 client.connect()
