@@ -3,11 +3,11 @@ An easy way to interact with the league client. This "library" is basically a mi
 
 # Documentation
 ## Dependencies
-- node-fetch@3.2.4
+- node-fetch@2.6.1
 
 ## Importing
 ```javascript
-import client, { C_Game, C_User, C_Runes } from "./interfaces.js"
+const { client, C_Game, C_User, C_Runes } = require("league-client-interface")
 ```
 ## Getting client credentials 
 ```javascript

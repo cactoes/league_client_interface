@@ -1,16 +1,17 @@
 {
-  "name": "league.client.interface",
-  "version": "1.0.0",
+  "name": "lcinterface",
+  "version": "2.0.0",
   "description": "",
-  "main": "example.js",
+  "main": "examples/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --no-warnings .",
+    "test": "node ."
   },
-  "type": "module",
+  "types": "types.d.ts",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^3.2.4"
+    "node-fetch": "^2.6.1"
   }
 }
