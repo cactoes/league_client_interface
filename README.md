@@ -6,6 +6,7 @@ An easy way to interact with the league client. This "library" is basically a mi
 - node-fetch@2.6.1
 
 ## Importing
+`npm install lcinterface`
 ```javascript
 const { client, C_Game, C_User, C_Runes } = require("league-client-interface")
 ```
