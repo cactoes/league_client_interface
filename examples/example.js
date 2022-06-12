@@ -1,5 +1,5 @@
 // global imports
-const { client, C_Game, C_User, C_Runes } = require("league-client-interface") // import for the interfaces
+const { client, C_Game, C_User, C_Runes } = require("lcinterface") // import for the interfaces
 
 // interfaces for interacting with the game
 const c_user = new C_User()
