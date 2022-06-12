@@ -29,7 +29,7 @@ client.connect()
 
 ## Setting up interface
 - constructor 
-  - `canCallUnhooked` If set to true, skips checking hook state when doing a [virutal call](#virtualCall)
+  - `canCallUnhooked` If set to true, skips checking hook state when doing a [virutal call](#interacting-with-the-client)
 ```javascript
 const c_interface = new C_InterfaceName(?canCallUnhooked)
 ```
@@ -102,7 +102,6 @@ All the states currently built into the module
   - `hooked` Boolean
   - `virtualCallCount` Number
 
-#virtualCall
 ### Interacting with the client
 Interact with the client's api endpoints **is async**
 - params
