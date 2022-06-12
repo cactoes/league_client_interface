@@ -1,4 +1,6 @@
 declare class lcinterface {
+  constructor(canCallUnhooked?: boolean);
+
   hook(object: credentials): boolean;
   unhook(): boolean;
 

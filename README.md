@@ -28,8 +28,10 @@ client.connect()
   - `disconnect` When lcinterface disconnects from the league client
 
 ## Setting up interface
+- constructor 
+  - `canCallUnhooked` If set to true, skips checking hook state when doing a [virutal call](#virtualCall)
 ```javascript
-const c_interface = new C_InterfaceName()
+const c_interface = new C_InterfaceName(?canCallUnhooked)
 ```
 
 ## Interface's
@@ -100,15 +102,16 @@ All the states currently built into the module
   - `hooked` Boolean
   - `virtualCallCount` Number
 
+#virtualCall
 ### Interacting with the client
 Interact with the client's api endpoints **is async**
 - params
   -  `dest` Is the endpoint in string form
-  -  `data` Is the json obj to send to the client
-  -  `method` Default is post if data is given else its get
+  -  `data` Is the json obj to send to the client, (optional)
+  -  `method` Default is post if data is given else it's get, (optional)
 - return json obj
 ```javascript
-c_interface.virtualCall(c_interface.dest.endpointName, (optional) data, (optional) method)
+c_interface.virtualCall(c_interface.dest.endpointName, ?data, ?method)
 ```
 
 ### Adding your own dest/endpoint
