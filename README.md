@@ -1,5 +1,5 @@
 # League client interface
-An easy way to interact with the league client. This "library" is basically a middle layer between your app and the league client
+An easy way to interact with the league client. This module is basically a middle layer between your app and the league client
 
 # Documentation
 ## Dependencies
@@ -24,8 +24,8 @@ client.connect()
 ```
 ### All events
 - client
-  - `connect` When "client" connects with the league client
-  - `disconnect` When "client" disconnects with the league client
+  - `connect` When lcinterface connects to the league client
+  - `disconnect` When lcinterface disconnects from the league client
 
 ## Setting up interface
 ```javascript
@@ -41,7 +41,7 @@ For interacting with the user
 ### C_Game
 For interacting with the game
 - dest
-  - `gameflow` State of the client (InGame, MathFound, ...)
+  - `gameflow` State of the client (InGame, MatchFound, ...)
   - `session` Current data of the match you're in
 ### C_Runes
 !!Experimental For interacting with your runes
@@ -59,17 +59,17 @@ c_interface.hook(credentials)
 ```
 
 ### Unhooking
-Unhooks the interface, returns false if you werent hooked
+Unhooks the interface, returns false if you weren't hooked
 - returns boolean
 ```javascript
 c_interface.unhook()
 ```
 
 ### State Cheking
-Check the state of a local interface viariable, returns false if state doesn't exists
+Check the state of a interface variable, returns false if state doesn't exists
 - params
   - `state` State to check
-  - `value` Value compare current state to
+  - `value` Value to compare current state to
 - returns boolean
 ```javascript
 c_interface.isCorrectState(state, value)
@@ -80,6 +80,7 @@ Set value of a state or create a state
 - params
   - `state` State to change
   - `data` What to set the state to
+- returns data
 ```javascript
 c_interface.setState(state, data)
 ```

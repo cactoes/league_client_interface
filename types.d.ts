@@ -3,7 +3,7 @@ declare class lcinterface {
   unhook(): boolean;
 
   isCorrectState(string: state, any: value): boolean;
-  setState(string: state, any: data): boolean;
+  setState(string: state, any: data): data;
   getState(string: state): any;
 
   virtualCall(string: dest, object?: data, string?: method): object;
