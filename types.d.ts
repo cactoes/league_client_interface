@@ -9,6 +9,8 @@ declare class lcinterface {
   getState(string: state): any;
 
   virtualCall(string: dest, object?: data, string?: method): object;
+
+  addDest(string: name, string: endpoint): boolean;
 }
 
 export = lcinterface;
