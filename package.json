@@ -1,6 +1,6 @@
 {
   "name": "lcinterface",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,5 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^2.6.1"
+  },
+  "repository": {
+    "url": "https://github.com/cactoes/league_client_interface"
   }
 }
