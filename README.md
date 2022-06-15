@@ -43,7 +43,7 @@ For interacting with the user
 ### C_Game
 For interacting with the game
 - dest
-  - `gameflow` State of the client (InGame, MatchFound, ...)
+  - `gameflow` State of the client (InGame, ReadyCheck, ...)
   - `session` Current data of the match you're in
 ### C_Runes
 !!Experimental For interacting with your runes
