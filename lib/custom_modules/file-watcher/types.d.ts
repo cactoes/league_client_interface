@@ -1,13 +1,15 @@
 declare class FileWatcher {
-  clear(): void;
+  constructor(path: string)
 
-  watch(path: string): void;
+  stop(): void
 
-  on(event: "add", listner: (path: string) => void): this;
+  start(): void
 
-  on(event: "change", listner: (path: string) => void): this;
+  on(event: "create", listner: (path: string) => void): this
 
-  on(event: "unlink", listner: () => void): this;
-};
+  on(event: "change", listner: (path: string) => void): this
 
-export = FileWatcher;
+  on(event: "remove", listner: () => void): this
+}
+
+export = FileWatcher

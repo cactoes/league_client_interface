@@ -1,13 +1,7 @@
 declare class LCConnector {
-  static s_LCPathFromProcess(): Promise<string | void>;
-  
-  static s_isValidPath(LCPath: string): boolean;
-  
-  constructor(path?: string);
+  connect(): void
 
-  connect(): void;
-
-  disconnect(): void;
+  disconnect(): void
 
   on(event: "connect", listner: (data: {
     address: string,
@@ -17,7 +11,7 @@ declare class LCConnector {
     protocol: string
   }) => void): this;
 
-  on(event: "disconnect", listner: () => void): this;
-};
+  on(event: "disconnect", listner: () => void): this
+}
 
-export = LCConnector;
+export = LCConnector
