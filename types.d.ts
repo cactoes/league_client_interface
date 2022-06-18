@@ -1,5 +1,9 @@
+interface opts {
+  canCallUnhooked?: boolean;
+}
+
 declare class lcinterface {
-  constructor(canCallUnhooked?: boolean)
+  constructor(options: opts)
 
   hook(object: credentials): boolean
   unhook(): boolean
