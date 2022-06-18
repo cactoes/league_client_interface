@@ -39,12 +39,11 @@ const c_interface = new C_InterfaceName({?canCallUnhooked})
 For interacting with the user
 - dest
   - `me` Gets users data
-  - `accept` Accepts or declines match
 ### C_Game
 For interacting with the game
 - dest
-  - `gameflow` State of the client (InGame, ReadyCheck, ...)
-  - `session` Current data of the match you're in
+  - `gameflow` (get) State of the client (InGame, ReadyCheck, patch)
+  - `session` (get)Current data of the match you're in
 - gameflow (all gameflow states)
   - `NONE`
   - `LOBBY`
@@ -55,10 +54,30 @@ For interacting with the game
   - `WAITINGFORSTATS`
   - `ENDOFGAME`
 ### C_Runes
-!!Experimental For interacting with your runes
+For interacting with your runes (no methods/docs yet)
 - dest
   - `runes` All runes of the user (in ids, good luck)
-
+### C_User
+For interacting with the lobby
+- dest
+  - `lobby` (get/post) Gets all lobby data or create lobby if queue id is given
+  - `search` (post/delete) Starts or stops the searching of a match
+  - `partytype` (put) Set party to open or closed
+  - `position` (put) Sets your lanes {firstPreference,secondPreference}
+  - `matchaccept` (post) Accepts match
+  - `matchdecline` (post) Declines match
+- queueId
+  - normal
+    - `blind` Id for blind pick
+    - `draft` Id for draft pick
+  - ranked
+    - `solo_duo` Id for solo/duo
+    - `flex` Id for flex
+  - extra
+    - `aram` Id for aram
+- type (lobby/party)
+  - `open` Param for setting lobby to open
+  - `closed` Param for setting lobby to closed
 ## Interface functions
 ### Hooking
 "Hook" onto the interface aka initialise the interface **make sure to only call once per interface**, returns false if already hooked <br />
@@ -110,16 +129,18 @@ All the states currently built into the module
 - states
   - `hooked` Boolean
   - `virtualCallCount` Number
+  - `canCallUnhooked` Boolean
 
 ### Interacting with the client
 Interact with the client's api endpoints **is async**
 - params
-  -  `dest` Is the endpoint in string form
-  -  `data` Is the json obj to send to the client
-  -  `method` Is the method used for fetch call (get, post, put, delete, ...)
+  - `dest` Is the endpoint in string form
+  - `data` Is the json obj to send to the client
+  - `method` Is the method used for fetch call (get, post, put, delete, patch)
+  - `returnJSON` (OPTIONAL) Should return json obj? (sometime lcu wont return anything), DEFAULT = true
 - return json obj
 ```javascript
-c_interface.virtualCall(c_interface.dest.endpointName, data, method)
+c_interface.virtualCall(c_interface.dest.endpointName, data, method, ?returnJSON)
 ```
 
 ### Adding your own dest/endpoint
@@ -131,3 +152,5 @@ Adds a endpoint to the dest list, returns false if dest already exists
 ```javascript
 c_interface.addDest(name, endpoint)
 ```
+## Lincense
+[MIT License](LICENSE)
