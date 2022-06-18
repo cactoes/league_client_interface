@@ -38,12 +38,12 @@ const c_interface = new C_InterfaceName({?canCallUnhooked})
 ### C_User
 For interacting with the user
 - dest
-  - `me` Gets users data
+  - `me` (get/post) Gets users data
 ### C_Game
 For interacting with the game
 - dest
   - `gameflow` (get) State of the client (InGame, ReadyCheck, patch)
-  - `session` (get)Current data of the match you're in
+  - `session` (get) Current data of the match you're in
 - gameflow (all gameflow states)
   - `NONE`
   - `LOBBY`
