@@ -152,5 +152,5 @@ Adds a endpoint to the dest list, returns false if dest already exists
 ```javascript
 c_interface.addDest(name, endpoint)
 ```
-## Licence
-[MIT Licence](LICENCE)
+## License
+[MIT License](LICENSE)
