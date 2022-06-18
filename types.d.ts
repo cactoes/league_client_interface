@@ -10,8 +10,6 @@ interface C_User_Dest {
 interface C_Game_Dest {
   gameflow: string
   session: string
-  matchaccept: string
-  matchdecline: string
 }
 
 interface C_Game_Gameflow {
@@ -29,6 +27,34 @@ interface C_Runes_Dest {
   runes: string
 }
 
+interface C_Lobby_Dest {
+  lobby: string,
+  search: string,
+  partytype: string,
+  position: string,
+  matchaccept: string
+  matchdecline: string
+}
+
+interface C_Lobby_QueueId {
+  normal: {
+    blind: number,
+    draft: number
+  },
+  ranked: {
+    solo_duo: number,
+    flex: number
+  },
+  extra: {
+    aram: number
+  }
+}
+
+interface C_Lobby_Type {
+  open: string,
+  closed: string
+}
+
 declare class lcinterface {
   constructor(options: opts)
 
@@ -39,7 +65,7 @@ declare class lcinterface {
   setState(string: state, any: data): data
   getState(string: state): any
 
-  async virtualCall(string: dest, object: data, string: method): object
+  async virtualCall(string: dest, object: data, string: method, boolean?: returnJSON = true): object
 
   addDest(string: name, string: endpoint): boolean
 }
@@ -61,4 +87,12 @@ export declare class C_Runes extends lcinterface {
   constructor(options: opts)
 
   dest: C_Runes_Dest
+}
+
+export declare class C_Lobby extends lcinterface {
+  constructor(options: opts)
+
+  dest: C_Lobby_Dest
+  queueId: C_Lobby_QueueId
+  type: C_Lobby_Type
 }
