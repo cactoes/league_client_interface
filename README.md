@@ -137,7 +137,7 @@ Interact with the client's api endpoints **is async**
   - `dest` Is the endpoint in string form
   - `data` Is the json obj to send to the client
   - `method` Is the method used for fetch call (get, post, put, delete, patch)
-  - `returnJSON` (OPTIONAL) Should return json obj? (sometime lcu wont return anything), DEFAULT = true
+  - `returnJSON` (OPTIONAL) Should return json obj? (sometimes lcu wont return anything), DEFAULT = true
 - return json obj
 ```javascript
 c_interface.virtualCall(c_interface.dest.endpointName, data, method, ?returnJSON)
