@@ -8,7 +8,7 @@ An easy way to interact with the league client. This module is basically a middl
 ## Importing
 `npm install lcinterface`
 ```javascript
-const { client, C_Game, C_User, C_Runes } = require("lcinterface")
+const { client, C_Game, C_User, C_Runes, C_Lobby } = require("lcinterface")
 ```
 ## Getting client credentials 
 ```javascript
