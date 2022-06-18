@@ -28,10 +28,10 @@ client.connect()
   - `disconnect` When lcinterface disconnects from the league client
 
 ## Setting up interface
-- constructor 
-  - `canCallUnhooked` If set to true, skips checking hook state when doing a [virutal call](#interacting-with-the-client)
+- constructor (In obj form {opt: value})
+  - `canCallUnhooked` If set to true, skips checking hook state when doing a [virutal call](#interacting-with-the-client), default is true(optional)
 ```javascript
-const c_interface = new C_InterfaceName(?canCallUnhooked)
+const c_interface = new C_InterfaceName({?canCallUnhooked})
 ```
 
 ## Interface's
@@ -45,6 +45,15 @@ For interacting with the game
 - dest
   - `gameflow` State of the client (InGame, ReadyCheck, ...)
   - `session` Current data of the match you're in
+- gameflow (all gameflow states)
+  - `NONE`
+  - `LOBBY`
+  - `MATCHMAKING`
+  - `READYCHECK`
+  - `CHAMPSELECT`
+  - `INPROGRESS`
+  - `WAITINGFORSTATS`
+  - `ENDOFGAME`
 ### C_Runes
 !!Experimental For interacting with your runes
 - dest
