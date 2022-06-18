@@ -115,11 +115,11 @@ All the states currently built into the module
 Interact with the client's api endpoints **is async**
 - params
   -  `dest` Is the endpoint in string form
-  -  `data` Is the json obj to send to the client, (optional)
-  -  `method` Default is post if data is given else it's get, (optional)
+  -  `data` Is the json obj to send to the client
+  -  `method` Is the method used for fetch call (get, post, put, delete, ...)
 - return json obj
 ```javascript
-c_interface.virtualCall(c_interface.dest.endpointName, ?data, ?method)
+c_interface.virtualCall(c_interface.dest.endpointName, data, method)
 ```
 
 ### Adding your own dest/endpoint
