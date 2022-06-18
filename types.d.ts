@@ -2,17 +2,17 @@ interface opts {
   canCallUnhooked?: boolean
 }
 
-interface C_User_Dest {
+interface user_dest {
   me: string
   accept: string
 }
 
-interface C_Game_Dest {
+interface game_dest {
   gameflow: string
   session: string
 }
 
-interface C_Game_Gameflow {
+interface game_gameflow {
   NONE: string
   LOBBY: string
   MATCHMAKING: string
@@ -23,11 +23,11 @@ interface C_Game_Gameflow {
   ENDOFGAME: string
 }
 
-interface C_Runes_Dest {
+interface runes_dest {
   runes: string
 }
 
-interface C_Lobby_Dest {
+interface lobby_dest {
   lobby: string,
   search: string,
   partytype: string,
@@ -36,7 +36,7 @@ interface C_Lobby_Dest {
   matchdecline: string
 }
 
-interface C_Lobby_QueueId {
+interface lobby_queueId {
   normal: {
     blind: number,
     draft: number
@@ -50,7 +50,7 @@ interface C_Lobby_QueueId {
   }
 }
 
-interface C_Lobby_Type {
+interface lobby_type {
   open: string,
   closed: string
 }
@@ -73,26 +73,26 @@ declare class lcinterface {
 export declare class C_User extends lcinterface {
   constructor(options: opts)
 
-  dest: C_User_Dest
+  dest: user_dest
 }
 
 export declare class C_Game extends lcinterface {
   constructor(options: opts)
 
-  dest: C_Game_Dest
-  gameflow: C_Game_Gameflow
+  dest: game_dest
+  gameflow: game_gameflow
 }
 
 export declare class C_Runes extends lcinterface {
   constructor(options: opts)
 
-  dest: C_Runes_Dest
+  dest: runes_dest
 }
 
 export declare class C_Lobby extends lcinterface {
   constructor(options: opts)
 
-  dest: C_Lobby_Dest
-  queueId: C_Lobby_QueueId
-  type: C_Lobby_Type
+  dest: lobby_dest
+  queueId: lobby_queueId
+  type: lobby_type
 }
