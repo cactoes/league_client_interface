@@ -127,7 +127,7 @@ Gets value of the requested state, returns false if state doesn't exists
 - params
   - `state` State to get
 - return state data<T>
-```javascript
+```typescript
 c_interface.getState<T>(state: string): T | boolean
 ```
 
@@ -146,7 +146,7 @@ Interact with the client's api endpoints **is async**
   - `method` Is the method used for fetch call (get, post, put, delete, patch)
   - `returnJSON` (OPTIONAL) Should return json obj? (sometimes lcu wont return anything), DEFAULT = true
 - return json obj<T>
-```javascript
+```typescript
 c_interface.virtualCall<T>(dest: string, data: object, method: string, returnJSON?: boolean = false): T | object
 ```
 
@@ -156,7 +156,7 @@ Adds a endpoint to the dest list, returns false if dest already exists
   - `name` Name of the dest
   - `endpoint` Actual enpoint string
 - return boolean
-```javascript
+```typescript
 c_interface.addDest(name: string, endpoint: string): boolean
 ```
 ## License
