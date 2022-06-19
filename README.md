@@ -91,15 +91,15 @@ For interacting with the lobby
 - params
   - `data` All the credentials
 - returns boolean
-```javascript
-c_interface.hook(credentials)
+```typescript
+c_interface.hook(credentials: object): boolean
 ```
 
 ### Unhooking
 Unhooks the interface, returns false if you weren't hooked
 - returns boolean
-```javascript
-c_interface.unhook()
+```typescript
+c_interface.unhook(): boolean
 ```
 
 ### State Cheking
@@ -108,8 +108,8 @@ Check the state of a interface variable, returns false if state doesn't exists
   - `state` State to check
   - `value` Value to compare current state to
 - returns boolean
-```javascript
-c_interface.isCorrectState(state, value)
+```typescript
+c_interface.isCorrectState(state: string, value: any): boolean
 ```
 
 ### Set State
@@ -118,17 +118,17 @@ Set value of a state or create a state
   - `state` State to change
   - `data` What to set the state to
 - returns data
-```javascript
-c_interface.setState(state, data)
+```typescript
+c_interface.setState<T>(state: string, data: T): T
 ```
 
 ### Get State
 Gets value of the requested state, returns false if state doesn't exists
 - params
   - `state` State to get
-- return state data
+- return state data<T>
 ```javascript
-c_interface.getState(state)
+c_interface.getState<T>(state: string): T | boolean
 ```
 
 ### All states
@@ -147,7 +147,7 @@ Interact with the client's api endpoints **is async**
   - `returnJSON` (OPTIONAL) Should return json obj? (sometimes lcu wont return anything), DEFAULT = true
 - return json obj<T>
 ```javascript
-c_interface.virtualCall<T>(c_interface.dest.endpointName, data, method, ?returnJSON)
+c_interface.virtualCall<T>(dest: string, data: object, method: string, returnJSON?: boolean = false): T | object
 ```
 
 ### Adding your own dest/endpoint
@@ -157,7 +157,7 @@ Adds a endpoint to the dest list, returns false if dest already exists
   - `endpoint` Actual enpoint string
 - return boolean
 ```javascript
-c_interface.addDest(name, endpoint)
+c_interface.addDest(name: string, endpoint: string): boolean
 ```
 ## License
 [MIT License](LICENSE)

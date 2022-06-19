@@ -70,19 +70,28 @@ interface lobby_type {
   closed: string
 }
 
+interface interface_states {
+  hooked: boolean,
+  virtualCallCount: number,
+  canCallUnhooked: boolean
+  [key: string]: unknown
+}
+
 declare class lcinterface {
   constructor(options: opts)
 
-  hook(object: credentials): boolean
+  hook(credentials: object): boolean
   unhook(): boolean
 
-  isCorrectState(string: state, any: value): boolean
-  setState(string: state, any: data): data
-  getState(string: state): any
+  isCorrectState(state: string, value: any): boolean
+  setState<T>(state: string, data: T): T
+  getState<T>(state: string): T | boolean
 
-  async virtualCall<T>(string: dest, object: data, string: method, boolean?: returnJSON = true): T
+  async virtualCall<T>(dest: string, data: object, method: string, returnJSON?: boolean = false): T | object
 
-  addDest(string: name, string: endpoint): boolean
+  addDest(name: string, endpoint: string): boolean
+
+  states: interface_states
 }
 
 export declare class C_User extends lcinterface {

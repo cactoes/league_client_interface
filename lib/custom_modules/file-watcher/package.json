@@ -1,6 +1,5 @@
 {
   "name": "file-watcher",
-  "version": "1.0.0",
   "main": "index.js",
   "types": "types.d.ts"
 }

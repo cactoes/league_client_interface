@@ -9,7 +9,7 @@ declare class LCConnector {
     port: number,
     password: string,
     protocol: string
-  }) => void): this;
+  }) => void): this
 
   on(event: "disconnect", listner: () => void): this
 }
