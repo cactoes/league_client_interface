@@ -53,6 +53,13 @@ For interacting with the game
   - `INPROGRESS`
   - `WAITINGFORSTATS`
   - `ENDOFGAME`
+- lanes (all lanes)
+  - `unselected`
+  - `top`
+  - `jungle`
+  - `middle`
+  - `bottom`
+  - `support`
 ### C_Runes
 For interacting with your runes (no methods/docs yet)
 - dest
