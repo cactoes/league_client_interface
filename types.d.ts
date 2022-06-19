@@ -1,3 +1,5 @@
+import LCConnector from "./lib/custom_modules/lcc/types"
+
 interface opts {
   canCallUnhooked?: boolean
 }
@@ -106,3 +108,5 @@ export declare class C_Lobby extends lcinterface {
   queueId: lobby_queueId
   type: lobby_type
 }
+
+export declare const client = new LCConnector()
