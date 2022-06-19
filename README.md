@@ -117,7 +117,7 @@ Set value of a state or create a state
 - params
   - `state` State to change
   - `data` What to set the state to
-- returns data<T>
+- returns data \<T\>
 ```typescript
 c_interface.setState<T>(state: string, data: T): T
 ```
@@ -126,7 +126,7 @@ c_interface.setState<T>(state: string, data: T): T
 Gets value of the requested state, returns false if state doesn't exists
 - params
   - `state` State to get
-- return state data<T> | boolean
+- return state data \<T\> | boolean
 ```typescript
 c_interface.getState<T>(state: string): T | boolean
 ```
@@ -145,7 +145,7 @@ Interact with the client's api endpoints **is async**
   - `data` Is the json obj to send to the client
   - `method` Is the method used for fetch call (get, post, put, delete, patch)
   - `returnJSON` (OPTIONAL) Should return json obj? (sometimes lcu wont return anything), DEFAULT = true
-- return json obj<T> | object
+- return json obj \<T\> | object
 ```typescript
 c_interface.virtualCall<T>(dest: string, data: object, method: string, returnJSON?: boolean = false): T | object
 ```
