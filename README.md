@@ -147,7 +147,7 @@ Interact with the client's api endpoints **is async**
   - `returnJSON` (OPTIONAL) Should return json obj? (sometimes lcu wont return anything), DEFAULT = true
 - return json obj \<T\>
 ```typescript
-c_interface.virtualCall<T>(dest: string, data: object, method: string, returnJSON?: boolean): Promise<T>
+c_interface.virtualCall<T>(dest: string, data: object | string, method: string, returnJSON?: boolean): Promise<T>
 ```
 
 ### Adding your own dest/endpoint
