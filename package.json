@@ -1,6 +1,6 @@
 {
   "name": "lcinterface",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,9 @@
     "test": "node ."
   },
   "types": "types.d.ts",
-  "keywords": [],
+  "keywords": [
+    "lcu", "league-client", "league-of-legends", "framework", "interface"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
