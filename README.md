@@ -42,7 +42,7 @@ For interacting with the user
 ### C_Game
 For interacting with the game
 - dest
-  - `gameflow` (get) State of the client (InGame, ReadyCheck, patch)
+  - `gameflow` (get) State of the client
   - `session` (get) Current data of the match you're in
 - gameflow (all gameflow states)
   - `NONE`
