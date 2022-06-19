@@ -24,12 +24,12 @@ interface game_gameflow {
 }
 
 interface game_lanes {
-  unselected: string,
-  top: string,
-  jungle: string,
-  middle: string,
-  bottom: string,
-  support: string
+  UNSELECTED: string,
+  TOP: string,
+  JUNGLE: string,
+  MIDDLE: string,
+  BOTTOM: string,
+  SUPPORT: string
 }
 
 interface runes_dest {
@@ -90,7 +90,7 @@ export declare class C_Game extends lcinterface {
 
   dest: game_dest
   gameflow: game_gameflow
-  lanes: game_lanes
+  lane: game_lanes
 }
 
 export declare class C_Runes extends lcinterface {
