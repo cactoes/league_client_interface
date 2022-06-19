@@ -85,9 +85,9 @@ declare class lcinterface {
 
   isCorrectState(state: string, value: any): boolean
   setState<T>(state: string, data: T): T
-  getState<T>(state: string): T | boolean
+  getState<T>(state: string): T
 
-  async virtualCall<T>(dest: string, data: object, method: string, returnJSON?: boolean = false): T | object
+  async virtualCall<T>(dest: string, data: object, method: string, returnJSON?: boolean): Promise<T>
 
   addDest(name: string, endpoint: string): boolean
 

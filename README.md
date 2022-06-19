@@ -126,9 +126,9 @@ c_interface.setState<T>(state: string, data: T): T
 Gets value of the requested state, returns false if state doesn't exists
 - params
   - `state` State to get
-- return state data \<T\> | boolean
+- return state data \<T\>
 ```typescript
-c_interface.getState<T>(state: string): T | boolean
+c_interface.getState<T>(state: string): T
 ```
 
 ### All states
@@ -145,9 +145,9 @@ Interact with the client's api endpoints **is async**
   - `data` Is the json obj to send to the client
   - `method` Is the method used for fetch call (get, post, put, delete, patch)
   - `returnJSON` (OPTIONAL) Should return json obj? (sometimes lcu wont return anything), DEFAULT = true
-- return json obj \<T\> | object
+- return json obj \<T\>
 ```typescript
-c_interface.virtualCall<T>(dest: string, data: object, method: string, returnJSON?: boolean = false): T | object
+c_interface.virtualCall<T>(dest: string, data: object, method: string, returnJSON?: boolean): Promise<T>
 ```
 
 ### Adding your own dest/endpoint
