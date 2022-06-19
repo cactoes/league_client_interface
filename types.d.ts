@@ -7,11 +7,13 @@ interface opts {
 interface user_dest {
   me: string
   accept: string
+  [key: string]: string
 }
 
 interface game_dest {
   gameflow: string
   session: string
+  [key: string]: string
 }
 
 interface game_gameflow {
@@ -36,6 +38,7 @@ interface game_lanes {
 
 interface runes_dest {
   runes: string
+  [key: string]: string
 }
 
 interface lobby_dest {
@@ -45,6 +48,7 @@ interface lobby_dest {
   position: string,
   matchaccept: string
   matchdecline: string
+  [key: string]: string
 }
 
 interface lobby_queueId {
@@ -76,7 +80,7 @@ declare class lcinterface {
   setState(string: state, any: data): data
   getState(string: state): any
 
-  async virtualCall(string: dest, object: data, string: method, boolean?: returnJSON = true): object
+  async virtualCall<T>(string: dest, object: data, string: method, boolean?: returnJSON = true): T
 
   addDest(string: name, string: endpoint): boolean
 }
