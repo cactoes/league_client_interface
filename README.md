@@ -96,7 +96,7 @@ For interacting with the lobby
   - `closed` Param for setting lobby to closed
 
 ### For all endpoints
-(https://lcu.vivide.re/)[https://lcu.vivide.re/]
+[https://lcu.vivide.re/](https://lcu.vivide.re/)
 ## Interface functions
 ### Hooking
 "Hook" onto the interface aka initialise the interface **make sure to only call once per interface**, returns false if already hooked <br />
