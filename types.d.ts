@@ -41,6 +41,64 @@ interface runes_dest {
   [key: string]: string
 }
 
+interface runes_spell {
+  Barrier: {
+    id: number,
+    key: string,
+    name: string
+  },
+  Cleanse: {
+    id: number,
+    key: string,
+    name: string
+  },
+  Exhaust: {
+    id: number,
+    key: string,
+    name: string
+  },
+  Flash: {
+    id: number,
+    key: string,
+    name: string
+  },
+  Ghost: {
+    id: number,
+    key: string,
+    name: string
+  },
+  Heal: {
+    id: number,
+    key: string,
+    name: string
+  },
+  Smite: {
+    id: number,
+    key: string,
+    name: string
+  },
+  Teleport: {
+    id: number,
+    key: string,
+    name: string
+  },
+  Clarity: {
+    id: number,
+    key: string,
+    name: string
+  },
+  Ignite: {
+    id: number,
+    key: string,
+    name: string
+  },
+  Mark: {
+    id: number,
+    key: string,
+    name: string
+  }
+}
+
 interface lobby_dest {
   lobby: string,
   search: string,
@@ -112,6 +170,7 @@ export declare class C_Runes extends lcinterface {
   constructor(options: opts)
 
   dest: runes_dest
+  spell: runes_spell
 }
 
 export declare class C_Lobby extends lcinterface {

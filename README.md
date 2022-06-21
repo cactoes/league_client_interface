@@ -64,6 +64,11 @@ For interacting with the game
 For interacting with your runes (no methods/docs yet)
 - dest
   - `runes` All runes of the user (in ids, good luck)
+- spell
+  - `Spellname` (Barrier, Cleanse, Exhaust, Flash, Ghost, Heal, Smite, Teleport, Clarity, Ignite, Mark)
+    - `id` Spell id
+    - `key` Other spell name form (ex. summonerFlash)
+    - `name` Spellname
 ### C_User
 For interacting with the lobby
 - dest
