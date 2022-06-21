@@ -45,6 +45,7 @@ interface runes_dest {
 }
 
 interface runes_spell {
+  [key: string]: { id: number, key: string, name: string }
   Barrier: {
     id: number,
     key: string,
