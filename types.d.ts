@@ -38,6 +38,7 @@ interface game_lanes {
 
 interface runes_dest {
   runes: string
+  spells: string
   [key: string]: string
 }
 

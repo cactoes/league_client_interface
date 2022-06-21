@@ -63,7 +63,8 @@ For interacting with the game
 ### C_Runes
 For interacting with your runes (no methods/docs yet)
 - dest
-  - `runes` All runes of the user (in ids, good luck)
+  - `runes` (get/post) All runes of the user (in ids, good luck)
+  - `spells` (get/patch) Get user active summoner spells {spell1Id, spell2Id}
 - spell
   - `Spellname` (Barrier, Cleanse, Exhaust, Flash, Ghost, Heal, Smite, Teleport, Clarity, Ignite, Mark)
     - `id` Spell id
@@ -72,10 +73,10 @@ For interacting with your runes (no methods/docs yet)
 ### C_User
 For interacting with the lobby
 - dest
-  - `lobby` (get/post) Gets all lobby data or create lobby if queue id is given
+  - `lobby` (get/post) Gets all lobby data or create lobby if queue id is given { queueId } (not sure if u can set/post more)
   - `search` (post/delete) Starts or stops the searching of a match
-  - `partytype` (put) Set party to open or closed
-  - `position` (put) Sets your lanes {firstPreference,secondPreference}
+  - `partytype` (put) Set party to open or closed (string)
+  - `position` (put) Sets your lanes {firstPreference, secondPreference}
   - `matchaccept` (post) Accepts match
   - `matchdecline` (post) Declines match
 - queueId
