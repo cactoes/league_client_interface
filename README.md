@@ -44,6 +44,9 @@ For interacting with the game
 - dest
   - `gameflow` (get) State of the client
   - `session` (get) Current data of the match you're in
+  - `champselect` (get) Gets current champion select data
+  - `action` (patch) Needs action id (+"/${actionid}") { championId } ! no return
+    - (post) Needs action id (+"/${actionid}/complete") { championId } ! no return
 - gameflow (all gameflow states)
   - `NONE`
   - `LOBBY`
@@ -63,22 +66,22 @@ For interacting with the game
 ### C_Runes
 For interacting with your runes (no methods/docs yet)
 - dest
-  - `runes` (get/post) All runes of the user (in ids, good luck)
-  - `spells` (patch) Get user active summoner spells {spell1Id, spell2Id}
+  - `runes` (get/put !no return) All runes of the user (in ids, good luck)
+  - `spells` (patch !no return) Get user active summoner spells {spell1Id, spell2Id}
 - spell
   - `Spellname` (Barrier, Cleanse, Exhaust, Flash, Ghost, Heal, Smite, Teleport, Clarity, Ignite, Mark)
     - `id` Spell id
     - `key` Other spell name form (ex. summonerFlash)
     - `name` Spellname
-### C_User
+### C_Lobby
 For interacting with the lobby
 - dest
   - `lobby` (get/post) Gets all lobby data or create lobby if queue id is given { queueId } (not sure if u can set/post more)
-  - `search` (post/delete) Starts or stops the searching of a match
-  - `partytype` (put) Set party to open or closed (string)
-  - `position` (put) Sets your lanes {firstPreference, secondPreference}
-  - `matchaccept` (post) Accepts match
-  - `matchdecline` (post) Declines match
+  - `search` (post !no return/delete !no return) Starts or stops the searching of a match
+  - `partytype` (put!no return) Set party to open or closed (string)
+  - `position` (put!no return) Sets your lanes {firstPreference, secondPreference}
+  - `matchaccept` (post !no return) Accepts match 
+  - `matchdecline` (post !no return) Declines match 
 - queueId
   - normal
     - `blind` Id for blind pick
@@ -91,6 +94,9 @@ For interacting with the lobby
 - type (lobby/party)
   - `open` Param for setting lobby to open
   - `closed` Param for setting lobby to closed
+
+### For all endpoints
+(https://lcu.vivide.re/)[https://lcu.vivide.re/]
 ## Interface functions
 ### Hooking
 "Hook" onto the interface aka initialise the interface **make sure to only call once per interface**, returns false if already hooked <br />

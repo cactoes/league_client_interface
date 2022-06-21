@@ -13,6 +13,8 @@ interface user_dest {
 interface game_dest {
   gameflow: string
   session: string
+  champselect: string
+  action: string
   [key: string]: string
 }
 
