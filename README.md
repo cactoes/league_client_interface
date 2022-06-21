@@ -64,7 +64,7 @@ For interacting with the game
 For interacting with your runes (no methods/docs yet)
 - dest
   - `runes` (get/post) All runes of the user (in ids, good luck)
-  - `spells` (get/patch) Get user active summoner spells {spell1Id, spell2Id}
+  - `spells` (patch) Get user active summoner spells {spell1Id, spell2Id}
 - spell
   - `Spellname` (Barrier, Cleanse, Exhaust, Flash, Ghost, Heal, Smite, Teleport, Clarity, Ignite, Mark)
     - `id` Spell id
