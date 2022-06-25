@@ -12,6 +12,10 @@ const { client, C_Game, C_User, C_Runes, C_Lobby } = require("lcinterface")
 ```
 ## Getting client credentials 
 ```javascript
+// optional
+// the interval that lcinterface check if the process is running (default is 1 sec/1000 ms)
+client.setCheckProcessInterval(1000)
+
 // listen for event connect
 client.on("connect", (data) => {
   // do stuff with our data/client credentials
